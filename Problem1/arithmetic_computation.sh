@@ -22,7 +22,7 @@ for((first_counter=${#storage_array[@]}-1;first_counter>=0; first_counter--));
 
               for((second_counter=1;second_counter<=$first_counter; second_counter++));
 	                do
-        	                if [[ ${storage_array[second_counter-1]} -lt ${storage_array[second_counter]} ]];
+        	                if [[ ${storage_array[second_counter-1]} -gt ${storage_array[second_counter]} ]];
                 	        then
                         	        temporary_storage=${storage_array[second_counter-1]}
                                 	storage_array[second_counter - 1]=${storage_array[second_counter]}
