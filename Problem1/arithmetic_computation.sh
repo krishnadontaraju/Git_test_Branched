@@ -6,3 +6,5 @@ first_computation=$(( first_number_a + second_number_b * third_number_c ))
 echo $first_computation
 second_computation=$(( first_number_a * second_number_b + third_number_c ))
 echo $second_computation
+third_computaution=$(( third_number_c + first_number_a / second_number_b ))
+echo $third_computation
