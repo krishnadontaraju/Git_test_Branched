@@ -18,19 +18,18 @@ done
 
 
 for((first_counter=${#storage_array[@]}-1;first_counter>=0; first_counter--));
-        do
+       do
 
-                for((second_counter=1;second_counter<=$first_counter; second_counter++));
-                do
-                        if [[ ${storage_array[second_counter-1]} -lt ${storage_array[second_counter]} ]];
-                        then
-                                temporary_storage=${storage_array[second_counter-1]}
-                                storage_array[second_counter - 1]=${storage_array[second_counter]}
-                                storage_array[second_counter]=$temporary_storage
+              for((second_counter=1;second_counter<=$first_counter; second_counter++));
+	                do
+        	                if [[ ${storage_array[second_counter-1]} -lt ${storage_array[second_counter]} ]];
+                	        then
+                        	        temporary_storage=${storage_array[second_counter-1]}
+                                	storage_array[second_counter - 1]=${storage_array[second_counter]}
+                                	storage_array[second_counter]=$temporary_storage
                         fi
                 done
         done
-
 
 
 
